@@ -16,9 +16,9 @@ spec:
     spec:
       serviceAccountName: default-sa
       imagePullSecrets:
-        - name: docker-secrets
+        - name: docker-secret
       containers:
-        - image: duypham0909/reverseproxy:v13
+        - image: thanhbt010620/reverseproxy:v6
           imagePullPolicy: IfNotPresent
           name: reverseproxy
           resources:

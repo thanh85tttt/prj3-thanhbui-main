@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
         - name: docker-secret
       containers:
-        - image: duypham0909/udagram-api-user:v13
+        - image: thanhbt010620/udagram-api-user:v3
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

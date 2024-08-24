@@ -19,7 +19,7 @@ spec:
       imagePullSecrets:
         - name: docker-secret
       containers:
-        - image: duypham0909/udagram-frontend:v16
+        - image: thanhbt010620/udagram-frontend:v6
           imagePullPolicy: Always
           name: udagram-frontend
           ports:

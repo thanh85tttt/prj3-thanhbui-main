@@ -26,15 +26,15 @@ script:
   - docker build -t reverseproxy ./udagram-reverseproxy
 
   # Add Tag
-  - docker tag udagram-api-feed duypham0909/udagram-api-feed:v1
-  - docker tag udagram-api-user duypham0909/udagram-api-user:v1
-  - docker tag udagram-frontend duypham0909/udagram-frontend:v1
-  - docker tag reverseproxy duypham0909/reverseproxy:v3
+  - docker tag udagram-api-feed thanhbt010620/udagram-api-feed:v1
+  - docker tag udagram-api-user thanhbt010620/udagram-api-user:v1
+  - docker tag udagram-frontend thanhbt010620/udagram-frontend:v1
+  - docker tag reverseproxy thanhbt010620/reverseproxy:v3
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push duypham0909/udagram-api-feed:v1
-  - docker push duypham0909/udagram-api-user:v1
-  - docker push duypham0909/udagram-frontend:v1
-  - docker push duypham0909/reverseproxy:v1
+  - docker push thanhbt010620/udagram-api-feed:v1
+  - docker push thanhbt010620/udagram-api-user:v1
+  - docker push thanhbt010620/udagram-frontend:v1
+  - docker push thanhbt010620/reverseproxy:v1
   - echo "Completed!"
