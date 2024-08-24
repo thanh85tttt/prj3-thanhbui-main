@@ -2,27 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udagram-api-feed
-  name: udagram-api-feed
+    service: api-feed
+  name: api-feed
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: udagram-api-feed
+      service: api-feed
   template:
     metadata:
       labels:
-        service: udagram-api-feed
+        service: api-feed
     spec:
       serviceAccountName: default-sa
       imagePullSecrets:
         - name: docker-secret 
       containers:
-        - image: thanhbt010620/udagram-api-feed:v3
+        - image: thanhbt010620/api-feed:v3
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          name: udagram-api-feed
+          name: api-feed
           resources:
             requests:
               memory: "64Mi"

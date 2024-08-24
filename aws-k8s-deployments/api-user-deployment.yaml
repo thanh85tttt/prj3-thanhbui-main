@@ -2,27 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udagram-api-user
-  name: udagram-api-user
+    service: api-user
+  name: api-user
 spec:
   replicas: 2
   selector:
     matchLabels:
-      service: udagram-api-user
+      service: api-user
   template:
     metadata:
       labels:
-        service: udagram-api-user
+        service: api-user
     spec:
       serviceAccountName: default-sa
       imagePullSecrets:
         - name: docker-secret
       containers:
-        - image: thanhbt010620/udagram-api-user:v3
+        - image: thanhbt010620/api-user:v3
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          name: udagram-api-user
+          name: api-user
           resources:
             requests:
               memory: "64Mi"

@@ -7,6 +7,6 @@ data:
   JWT_SECRET: YMkcX9oyGyTxPvYs7oIihU0U0VmGPjRTks1...
   POSTGRES_DB: database_prj3_thanhbt
   POSTGRES_HOST: database-prj3-thanhbt.cliqyun1jai3.us-east-1.rds.amazonaws.com
-  URL: http://localhost:8100
+  URL: http://a951713a5020b4a9b845defbbc257ff5-2019581281.us-east-1.elb.amazonaws.com:8100
 metadata:
   name: env-config
